@@ -9,7 +9,6 @@
     padding-bottom: 27px;
     padding-top:12px;
     transition: all .25s ease-in-out;
-  white-space: nowrap;
 }
 
 .challenge:hover{
@@ -102,6 +101,7 @@ height: 1.25rem; */
     width:6.4375rem;
     height: 1.25rem;
     gap: .25rem;
+  white-space: nowrap;
 }
 
 .powerup>img{
