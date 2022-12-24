@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins' ;
+  box-sizing: border-box;
+  color: #424242;
+}
+
+.App{
+  position:absolute;
+  max-width: 100%;
+  top:0px;
+  left: 0px;
+  display:flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #F6F6F6;
+}
+
+.container {
+  display:flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  background-color: #fff;
+  gap: 4.8125rem;
+  border-top-left-radius: 1rem ;
+  padding-inline: 2.375rem;
+  position: fixed;
+  overflow-y: auto;
+  right: 0px;
+}
+
+.account-settings-button:hover{
+  cursor: pointer;
+}
+
+.logo:hover{
+  cursor:pointer;
+}
+
+.logo:hover>.logo-image{
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: bounce-7;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+@keyframes bounce-7 {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-20px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+
+.inner-container{
+  display: flex;
+  flex-direction: column;
+  height: calc(100%-4.5rem);
+  gap:2rem;
+}
+
+.side-bar{
+  display: flex;
+  flex-direction: column;
+  gap:87px;
+  width:20%;
+  height: 100%;
+  background-color:#F6F6F6;
+  justify-content: start;
+  position: fixed;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  /* padding-left: 33px; */
+  gap:36px;
+}
+
+li{
+  list-style: none;
+  display: flex;
+  flex-direction:row;
+  gap: 29px;
+  width: 100%;
+  height: 2.875rem;
+  align-items: center;
+}
+
+li>.element{
+  list-style: none;
+  display: flex;
+  flex-direction:row;
+  gap: 9px;
+  width: 100%;
+  height: 2.875rem;
+  align-items: center;
+}
+
+li:hover{
+  cursor: pointer;
+}
+
+li>.selection-wedge{
+  display: flex;
+  flex-direction:row;
+  justify-self: start;
+  width: 4px;
+  min-width: 4px;
+  height:100%;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  transition: all .25s ease-in-out;
+  background-color: #F6F6F6;
+}
+
+li:hover>.selection-wedge,li.selected>.selection-wedge{
+  background-color:#256EFF;
+}
+
+.logo{
+  padding-top: 19px;
+  padding-left: 32px;
+  display: flex;
+  justify-content: start;
+  align-items:center;
+  gap:7.5px;
+}
+
+.top-bar{
+  display: flex;
+  height: 4.5rem;
+  min-height: 4.5rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 1rem ;
+  border-bottom: 1px solid #F6F6F6;
+}
+
+.account-settings-button{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+  gap:.585rem;
+  font-family: 'Poppins';
+}
+
+.account-settings-button>div>h3{
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+color: #424242;
+}
+
+.account-settings-button>div>p{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 9px;
+  line-height: 14px;
+
+  color: #424242;
+}
+
+.challenges-control{
+  display: inherit;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-challenge{
+  display:inherit;
+  justify-content:inherit;
+  align-items: inherit;
+  gap:7px;
+}
+
+.create-challenge-button{
+  background:none;
+  border:none;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: right;
+  color: #256EFF;
+}
+.create-challenge-button:hover{
+  cursor: pointer;
+}
+
+.challenges{
+  /* display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: space-between; */
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(18.5rem,1fr));
+  gap: 1rem
+
+}
+
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 90%;
+  }
+  .side-bar{
+    width: 10%
+  }
+  .side-bar>ul>li,.element{
+    gap:0;
+    justify-content: center;
+  }
+  .path,.logo-text{
+    display: none;
+  }
+  .logo{
+    justify-content: center;
+    padding-left: 0;
+  }
+  li>.selection-wedge{
+    width:7px
+  }
+}
+
