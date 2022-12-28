@@ -141,7 +141,7 @@ function App() {
               <img src={add} alt="add button" width={"20px"} />
             </div>
           </div>
-          <motion.div animate={{y:[200,0]}} className="challenges">
+          <motion.div animate={{y:[200,0]}} transition={{ y: { duration: .5 } ,default: { ease: "linear" } }} className="challenges">
             {challenges.map((challenge) => (
             <Challenge 
               active      ={challenge.active} 
